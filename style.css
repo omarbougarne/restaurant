@@ -2,9 +2,103 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #F5F2DF;
+}
 nav{
     background-color: #600000;
 }
 .nav-link{
     color: #F5F2DF;
 }
+
+/* .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px; 
+    display: inline;
+  }
+  
+  .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+  }
+  
+  label {
+    flex: 1;
+  }
+  
+  input {
+    width: 200px;
+    margin-right: 1290px;
+    margin-left: 500px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+  }
+  .send{
+    margin-left: 20px;
+    background-color: #600000;
+    color: #F5F2DF;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 90px;
+  }
+  .form{
+    display: flex;
+    flex-direction: row;
+    margin-right: 9000px;
+    justify-content: center;
+    justify-content: space-around;
+  }
+   */
+   .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .form {
+    flex: 1;
+  }
+  
+  .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    flex: 1;
+  }
+  
+  input {
+    flex: 3; /* Adjust this value to control the input field width */
+    width: 100%;
+    width: 10px;
+    margin-right: 100px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    margin-bottom: 20px;
+  }
+  .send{
+    margin-left: 20px;
+    background-color: #600000;
+    color: #F5F2DF;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 90px;
+    height: 30px;
+  }
+  .map {
+    flex: 1;
+  }
+  iframe{
+    border-radius: 10px;
+
+  }
+  
