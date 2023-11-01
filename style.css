@@ -11,7 +11,9 @@ nav{
 .nav-link{
     color: #F5F2DF;
 }
-
+img{
+  width: 12%;
+}
 /* .form {
     display: flex;
     flex-direction: column;
@@ -76,7 +78,7 @@ nav{
   }
   
   input {
-    flex: 3; /* Adjust this value to control the input field width */
+    flex: 3; 
     width: 100%;
     width: 10px;
     margin-right: 100px;
@@ -101,4 +103,30 @@ nav{
     border-radius: 10px;
 
   }
+  footer{
+    margin-top: 30%;
+    padding: 6%;
+    background-color: black;
+    color: white;
+  }
+  .paragraph3{
+    margin-left: -10%;
+    color: #600000;
+    font-family: 'Inknut Antiqua'; 
+    font-size: 40px;
+  }
+  .paragraph4{
+    margin-top: -5%;
+    margin-left: -10%;
+    font-family: 'Inknut Antiqua'; 
+    font-size: 40px;
+  }
+.icons{
+  display: flex;
+  justify-content: center;
+
+}
+.icons i{
+  margin:0 10px;
+}
   
