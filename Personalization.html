@@ -49,8 +49,10 @@
 
 <section">
     <div class="container-fluid mt-5 mb-5">
-        <div class="d-flex justify-content-center p-md-5  embed-responsive">
-            <img src="menu-2023-website-roll-real-crab-california-roll-2-min 1.png" class="img-fluid " alt="sushi">
+        <div class="d-flex justify-content-center p-md-5  embed-responsive cont" id="1">
+            <img src="" class="img-fluid " alt="sushi" id="imgId" >
+            <h4 id="titleId"></h4>
+            <p id="priceId"></p>
         </div>
     </div>
 
@@ -80,8 +82,36 @@
 
     </div>
 
-</section>
+
 
     
+</section>
+<script>
+// Retrieve personalized plate data from localStorage
+const personalizedPlateData = localStorage.getItem("personalizedPlate");
+
+// Parse the JSON string back to an object
+const personalizedPlate = JSON.parse(personalizedPlateData);
+
+// Get elements by their IDs
+const imageElement = document.getElementById("imgId");
+const priceElement = document.getElementById("priceId");
+const titleElement = document.getElementById("titleId");
+
+// Check if elements exist before populating
+if (
+  personalizedPlate &&
+  titleElement &&
+  priceElement &&
+  imageElement
+) {
+  // Populate the elements with personalized plate data
+  titleElement.textContent = personalizedPlate.title;
+  priceElement.textContent = personalizedPlate.price;
+  imageElement.src = personalizedPlate.imageSrc;
+}
+
+</script>
+
 </body>
 </html>
