@@ -158,8 +158,44 @@
             </div>
           
       </div>
+      <div id="popup-menu" class="popup-menu">
+        <div class="popup-content">
+          <span class="close" onclick="closePopupMenu()">&times;</span>
+          <h2>Adjust Quantity</h2>
+          <input type="number" id="quantity-input" value="1" min="1">
+          <button id="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+   <script>
+    // Add this code to your existing JavaScript code
 
-   
+// Function to open the popup menu
+function openPopupMenu() {
+  document.getElementById("popup-menu").style.display = "block";
+}
+
+// Function to close the popup menu
+function closePopupMenu() {
+  document.getElementById("popup-menu").style.display = "none";
+}
+
+// Function to add the selected item to the cart
+function addToCart() {
+  const quantity = document.getElementById("quantity-input").value;
+  // You can use the 'quantity' and other item details to add it to the cart
+  // Example: Save it in an array or send it to a server
+  console.log(`Added to cart: Quantity ${quantity}`);
+  closePopupMenu();
+}
+
+// Add this event listener to your 'Add to Cart' buttons
+document.querySelectorAll('.btn-success').forEach(button => {
+  button.addEventListener('click', () => {
+    openPopupMenu();
+  });
+});
+
+   </script>
 
       
 

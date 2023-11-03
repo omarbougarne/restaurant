@@ -35,17 +35,29 @@
               <li class="nav-item ">
                 <a class="nav-link" href="restaurant/contact.html">Contact</a>
               </li>
-              <li class="nav-item"> 
-                  <img class="tswira" src="img/sela.png">
+              <li class="nav-item ">
+                <a class="nav-link" href="restaurant/contact.html"><img class="tswira" src="img/sela.png"></a>
               </li>
-              
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
+      </nav>
+=======
+<<<<<<< HEAD
+      </nav>
+      <div class="container" >
+        <h1 class="title mb-5" >Sushi</h1>
+        <div class="row">
+          <div class="col-4">
+          <div class="card " style="width: 350px; background: none; border:none">
+=======
       </nav>t
 
+>>>>>>> 4ec7b1e8361e90efa63dbcfa92942bfd8d4080e7
 
 
+      
 <section id="menu1">
       <h1 class="title text-center m-5" >Sushi</h1>
 
@@ -62,6 +74,7 @@
         <div class="row mb-5">
           <div class="col-4 mb-5">
           <div class="card" id="1" style="width: 350px; background: none; border:none">
+>>>>>>> 865f2e28fe3a31242c94dd138a7c596dbf3e883e
             <img class="card-img-top" src="img/1.png" alt="Card image">
             <div class="card-body text-center">
               <h4 class="card-title">Tekka Maki</h4>
@@ -228,18 +241,32 @@
             </div>
           
       </div>
+      </div>
+      <div class="ar9am">
+        <div class="pagination">
+          <button class="btn1">prev</button>
+           <ul>
+              <li class="link" value="1">1</li>
+              <li class="link" value="2">2</li>
+              <li class="link" value="3">3</li>
+              <li class="link" value="4">4</li>
+              <li class="link" value="5">5</li>
+           </ul>
+
+        </div>
+
+      </div>
 
     </section>
-   
-<div id="popup-menu" class="popup-menu">
-  <div class="popup-content">
-    <span class="close" onclick="closePopupMenu()">&times;</span>
-    <h2>Adjust Quantity</h2>
-    <input type="number" id="quantity-input" value="1" min="1">
-    <button id="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+    <div class="cart-popup">
+      <div class="cart-content">
+          <button class="cart-close">Close</button>
+          <div class="cart-items">
+              <!-- Cart items will be added here -->
+          </div>
+          <div class="cart-total">Total: 0 dh</div>
+      </div>
   </div>
-</div>
-
       
 
 
@@ -276,33 +303,6 @@ function handlePersonalizeButtonClick(event, id) {
   window.location.href = "Personalization.html";
 }
 
-// Add this code to your existing JavaScript code
-
-// Function to open the popup menu
-function openPopupMenu() {
-  document.getElementById("popup-menu").style.display = "block";
-}
-
-// Function to close the popup menu
-function closePopupMenu() {
-  document.getElementById("popup-menu").style.display = "none";
-}
-
-// Function to add the selected item to the cart
-function addToCart() {
-  const quantity = document.getElementById("quantity-input").value;
-  // You can use the 'quantity' and other item details to add it to the cart
-  // Example: Save it in an array or send it to a server
-  console.log(`Added to cart: Quantity ${quantity}`);
-  closePopupMenu();
-}
-
-// Add this event listener to your 'Add to Cart' buttons
-document.querySelectorAll('.btn-success').forEach(button => {
-  button.addEventListener('click', () => {
-    openPopupMenu();
-  });
-});
 
 </script>
 
