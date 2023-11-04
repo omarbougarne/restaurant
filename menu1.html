@@ -240,7 +240,27 @@
   </div>
 </div>
 
-      
+<div class="container mt-5 d-flex justify-content-center" >
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="menu1.html">1</a></li>
+      <li class="page-item"><a class="page-link" href="menu2.html">2</a></li>
+      <li class="page-item"><a class="page-link" href="menu3.html">3</a></li>
+      <li class="page-item"><a class="page-link" href="menu4.html">4</a></li>
+      <li class="page-item"><a class="page-link" href="menu5.html">5</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 
 
@@ -303,7 +323,47 @@ document.querySelectorAll('.btn-success').forEach(button => {
     openPopupMenu();
   });
 });
+const itemsPerPage = 4; // Number of items to display per page
+  let currentPage = 1; // Current page
 
+  // Function to update the content based on the current page
+  function updateContent() {
+    // Example: Hide all items in your list
+    const allItems = document.querySelectorAll('.card');
+    allItems.forEach((item) => item.style.display = 'none');
+
+    // Calculate the range of items to display on the current page
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    // Display items in the current range
+    const itemsToDisplay = allItems.slice(startIndex, endIndex);
+    itemsToDisplay.forEach((item) => item.style.display = 'block');
+  }
+
+  // Function to handle page change
+  function changePage(newPage) {
+    if (newPage >= 1 && newPage <= Math.ceil(allItems.length / itemsPerPage)) {
+      currentPage = newPage;
+      updateContent();
+    }
+  }
+
+  // Initial content update
+  updateContent();
+
+  // Event listeners for pagination buttons
+  const prevPageBtn = document.querySelector('.pagination .page-item:first-child .page-link');
+  const nextPageBtn = document.querySelector('.pagination .page-item:last-child .page-link');
+
+  prevPageBtn.addEventListener('click', () => changePage(currentPage - 1));
+  nextPageBtn.addEventListener('click', () => changePage(currentPage + 1));
+
+  // Add event listeners for page numbers if needed
+  const pageLinks = document.querySelectorAll('.pagination .page-link:not([aria-label])');
+  pageLinks.forEach((pageLink) => {
+    pageLink.addEventListener('click', () => changePage(parseInt(pageLink.textContent));
+  });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
