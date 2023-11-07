@@ -193,4 +193,16 @@ span{
 #add-to-cart-button:hover {
   background-color: #45a049;
 }
-
+.cont-page{
+  position: absolute;
+  top: 1700px;
+}
+.cont-margin{
+  margin-top: 300px;
+}
+.title{
+  text-align: center;
+  position: relative;
+  left: 500px;
+  top: 100px;
+}
